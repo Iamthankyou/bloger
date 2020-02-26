@@ -1,4 +1,4 @@
-
+// Source: https://duynotes.blogspot.com/2020/02/design-pattern-singleton-pattern.html
 class singleton {
 	// lazy construction
 	// the class variable is null if no instance is
