@@ -2,8 +2,7 @@
 import java.util.*;
 import javax.swing.JFrame;
 // ..etc.
-public class OrderView extends JPanel implements
-  Observer, ActionListener {
+public class OrderView extends JPanel implements Observer, ActionListener {
     // Controller
     private OrderController controller;
     // User-Interface Elements
