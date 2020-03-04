@@ -13,14 +13,14 @@ public class OrderView extends JPanel implements Observer, ActionListener {
     private JLabel totalLabel;
     private JTable groceryList;
     private void createUI() {
-    // Initialize UI elements. e.g.:
-    deleteItemButton = new JButton("Delete Item");
-    add(deleteItemButton);
-    ...
-    // Add listeners. e.g.:
-    deleteItemButton.addActionListener(this);
-    ...
-  }
+        // Initialize UI elements. e.g.:
+        deleteItemButton = new JButton("Delete Item");
+        add(deleteItemButton);
+        ...
+        // Add listeners. e.g.:
+        deleteItemButton.addActionListener(this);
+        ...
+     }
   public void update ( Observable s, Object arg ) {
     display(((StoreOrder) s).getItemList(),((StoreOrder) s).getPriceList());
     }
