@@ -44,6 +44,7 @@ class Solution {
                 return false;
             }
             
+            // Don't care character if it same
             pointerS--;
             pointerT--;
         }
