@@ -22,10 +22,7 @@ class Solution {
                 else{
                     dp[unique][j] = Math.max(dp[1-unique][j],dp[unique][j-1]);
                 }
-                
-                System.out.print(dp[unique][j]);
             }
-            System.out.println();
         }
         
         return dp[unique][n];
