@@ -1,32 +1,26 @@
 //duynotes.blogspot.com
-class StockSpanner {
-    private Stack<Integer> stk;
-    private int i;
-    private List<Integer> list;
-    
-    public StockSpanner() {
-        stk = new Stack<>();
-        i=-1;
-        list = new ArrayList<>();
-    }
-    
-    public int next(int price) {
-        i++;
+class Solution {
+    public boolean checkInclusion(String s1, String s2) {
+        int[] freq = new int[26];
         
-        while (!stk.isEmpty() && list.get(stk.peek()) <= price){
-            stk.pop();
+        for (char i:s1.toCharArray()){
+            freq[i-'a']++;
         }
         
-        int res = stk.isEmpty() ? i+1: i-stk.peek();
-        stk.push(i);
-        list.add(price);
+        int[] window = new int[26];
         
-        return res;
+        for (int i=0; i<s2.length(); i++){
+            window[s2.charAt(i) - 'a']++;
+
+            if (i>=s1.length()){
+                window[s2.charAt(i-s1.length())-'a']--;    
+            }
+            
+            if (Arrays.equals(freq,window)){
+                return true;
+            }            
+        }
+        
+        return false;
     }
 }
-
-/**
- * Your StockSpanner object will be instantiated and called as such:
- * StockSpanner obj = new StockSpanner();
- * int param_1 = obj.next(price);
- */
