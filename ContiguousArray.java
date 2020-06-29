@@ -1,4 +1,4 @@
-// duynotes.blogspot.com
+
 class Solution {
     public int findMaxLength(int[] nums) {
         HashMap<Integer,Integer> hashMap = new HashMap<>();
