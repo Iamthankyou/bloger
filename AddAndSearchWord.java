@@ -40,7 +40,8 @@ class WordDictionary {
                 for (int j=0; j<26; j++){
                     if (curr.getArr()[j] != null){
                         if (searchNode(curr.getArr()[j],word,i+1,ans) == true){
-                            return true;
+                           // My key
+			     	return true;
                         }
                     }
                     
