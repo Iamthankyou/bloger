@@ -10,7 +10,7 @@ class Solution {
         if (n%2!=0){
             res*=n<0?1.0/x:x;
         }
-        
+
         return res;
     }
     
